@@ -1,74 +1,73 @@
-
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>EEVON CHIEW Portfolio</title>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/turn.js@4/turn.min.js"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PORTFOLIO 2026 | Eevon</title>
+  <meta name="description" content="Eevon — Interior Design Portfolio 2026">
   <style>
-    body { background: #333; margin: 0; padding: 0; }
-    #flipbook {
-      width: 960px;
-      height: 600px;
-      margin: 40px auto;
-    }
-    #flipbook .page {
-      width: 100%;
-      height: 100%;
-      background: white;
-    }
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:#111;color:#f5f5f5;font-family:Arial,Helvetica,sans-serif}
+    a{color:inherit}
+    .hero{min-height:58vh;padding:8vw 7vw;display:flex;align-items:flex-end;
+      background:linear-gradient(180deg,#777 0%,#333 55%,#111 100%)}
+    .eyebrow{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#ccc;margin-bottom:18px}
+    h1{font-size:clamp(58px,12vw,150px);line-height:.82;letter-spacing:-.06em;margin:0}
+    .intro{max-width:650px;color:#ccc;font-size:18px;line-height:1.6;margin-top:28px}
+    nav{position:sticky;top:0;z-index:5;background:rgba(17,17,17,.94);
+      border-bottom:1px solid #333;padding:15px 7vw;display:flex;
+      justify-content:space-between;align-items:center;gap:15px}
+    .brand{font-weight:700;letter-spacing:.1em;font-size:13px}
+    .buttons{display:flex;gap:10px;flex-wrap:wrap}
+    .button{display:inline-block;text-decoration:none;border:1px solid #666;border-radius:30px;
+      padding:10px 17px;font-size:13px}
+    .button:hover{background:#fff;color:#111}
+    main{padding:7vw}
+    h2{font-size:clamp(34px,6vw,72px);letter-spacing:-.05em;margin:0 0 35px}
+    .viewer{width:100%;height:78vh;min-height:560px;background:#222;border:1px solid #333}
+    iframe{width:100%;height:100%;border:0}
+    .fallback{padding:25px;color:#aaa}
+    footer{border-top:1px solid #333;padding:45px 7vw 65px;color:#888;font-size:13px}
+    @media(max-width:700px){
+      .hero{min-height:55vh;padding:12vw 6vw}
+      nav{padding:14px 6vw}
+      main{padding:12vw 6vw}
+      .viewer{height:70vh;min-height:450px}
+      .brand{font-size:11px}
     }
   </style>
 </head>
 <body>
-  <div id="flipbook">
-    <div class="page"><img src="pages/page_01.jpg" alt="Page 1"></div>
-    <div class="page"><img src="pages/page_02.jpg" alt="Page 2"></div>
-    <div class="page"><img src="pages/page_03.jpg" alt="Page 3"></div>
-    <div class="page"><img src="pages/page_04.jpg" alt="Page 4"></div>
-    <div class="page"><img src="pages/page_05.jpg" alt="Page 5"></div>
-    <div class="page"><img src="pages/page_06.jpg" alt="Page 6"></div>
-    <div class="page"><img src="pages/page_07.jpg" alt="Page 7"></div>
-    <div class="page"><img src="pages/page_08.jpg" alt="Page 8"></div>
-    <div class="page"><img src="pages/page_09.jpg" alt="Page 9"></div>
-    <div class="page"><img src="pages/page_10.jpg" alt="Page 10"></div>
-    <div class="page"><img src="pages/page_11.jpg" alt="Page 11"></div>
-    <div class="page"><img src="pages/page_12.jpg" alt="Page 12"></div>
-    <div class="page"><img src="pages/page_13.jpg" alt="Page 13"></div>
-    <div class="page"><img src="pages/page_14.jpg" alt="Page 14"></div>
-    <div class="page"><img src="pages/page_15.jpg" alt="Page 15"></div>
-    <div class="page"><img src="pages/page_16.jpg" alt="Page 16"></div>
-    <div class="page"><img src="pages/page_17.jpg" alt="Page 17"></div>
-    <div class="page"><img src="pages/page_18.jpg" alt="Page 18"></div>
-    <div class="page"><img src="pages/page_19.jpg" alt="Page 19"></div>
-    <div class="page"><img src="pages/page_20.jpg" alt="Page 20"></div>
-    <div class="page"><img src="pages/page_21.jpg" alt="Page 21"></div>
-    <div class="page"><img src="pages/page_22.jpg" alt="Page 22"></div>
-    <div class="page"><img src="pages/page_23.jpg" alt="Page 23"></div>
-    <div class="page"><img src="pages/page_24.jpg" alt="Page 24"></div>
-    <div class="page"><img src="pages/page_25.jpg" alt="Page 25"></div>
-    <div class="page"><img src="pages/page_26.jpg" alt="Page 26"></div>
-    <div class="page"><img src="pages/page_27.jpg" alt="Page 27"></div>
-    <div class="page"><img src="pages/page_28.jpg" alt="Page 28"></div>
-    <div class="page"><img src="pages/page_29.jpg" alt="Page 29"></div>
-    <div class="page"><img src="pages/page_30.jpg" alt="Page 30"></div>
-    <div class="page"><img src="pages/page_31.jpg" alt="Page 31"></div>
-    <div class="page"><img src="pages/page_32.jpg" alt="Page 32"></div>
-    <div class="page"><img src="pages/page_33.jpg" alt="Page 33"></div>
-    <div class="page"><img src="pages/page_34.jpg" alt="Page 34"></div>
-    <div class="page"><img src="pages/page_35.jpg" alt="Page 35"></div>
-    <div class="page"><img src="pages/page_36.jpg" alt="Page 36"></div>
 
+<section class="hero">
+  <div>
+    <div class="eyebrow">Interior Design Portfolio · 2026</div>
+    <h1>PORTFOLIO</h1>
+    <p class="intro">Presentations by Eevon.</p>
   </div>
-  <script>
-    $('#flipbook').turn({
-      autoCenter: true
-    });
-  </script>
+</section>
+
+<nav>
+  <div class="brand">EEVON / 2026</div>
+  <div class="buttons">
+    <a class="button" href="PORTFOLIO%20-%202026.pdf" target="_blank" rel="noopener">View PDF</a>
+    <a class="button" href="PORTFOLIO%20-%202026.pdf" download>Download PDF</a>
+  </div>
+</nav>
+
+<main>
+  <h2>Portfolio</h2>
+  <div class="viewer">
+    <iframe src="PORTFOLIO%20-%202026.pdf#view=FitH" title="PORTFOLIO 2026 PDF">
+      <div class="fallback">
+        PDF preview is not supported in this browser.
+        <a href="PORTFOLIO%20-%202026.pdf">Open the PDF</a>.
+      </div>
+    </iframe>
+  </div>
+</main>
+
+<footer>© 2026 Eevon · Interior Design Portfolio</footer>
+
 </body>
 </html>
